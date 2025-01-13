@@ -1,9 +1,11 @@
 :root {
-    --primary: #B5D5C5;
-    --secondary: #B08BBB;
-    --accent: #ECA869;
-    --background: #F5F5F5;
-    --text: #2C3333;
+    --primary: #6C63FF;
+    --secondary: #4CAF50;
+    --accent: #FF6B6B;
+    --background: #ffffff;
+    --surface: #f8f9fa;
+    --text: #2C3E50;
+    --text-light: #6c757d;
 }
 
 * {
@@ -12,16 +14,39 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     line-height: 1.6;
     color: var(--text);
     background-color: var(--background);
 }
 
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
 }
 
 /* Layout */
@@ -29,39 +54,69 @@ h1, h2, h3, h4, h5, h6 {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 0 1rem;
 }
 
 section {
-    padding: 5rem 0;
+    padding: 6rem 0;
 }
 
-/* Typography */
-h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+/* Grid System */
+.grid {
+    display: grid;
+    gap: 2rem;
 }
 
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
 }
 
-p {
-    margin-bottom: 1rem;
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
 }
 
-/* Responsive Design */
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-3 { margin-bottom: 3rem; }
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 1.8rem; }
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
     }
-    
-    h2 {
-        font-size: 2rem;
-    }
-    
+
     section {
-        padding: 3rem 0;
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+
+    .container {
+        width: 95%;
     }
 }

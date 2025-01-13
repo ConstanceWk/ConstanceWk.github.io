@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets | Data Science Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="../assets/css/components.css" rel="stylesheet">
@@ -22,81 +24,41 @@
     </nav>
 
     <!-- Projects Header -->
-    <header class="page-header">
+    <header class="projects-header">
         <div class="container">
-            <h1 class="fade-in">Mes Projets Data Science</h1>
-            <p class="subtitle">Découvrez mes réalisations en analyse de données et machine learning</p>
+            <h1 class="animate-on-scroll">Projets <span class="gradient-text">Data Science</span></h1>
+            <p class="lead">Découvrez mes réalisations en analyse de données et machine learning</p>
         </div>
     </header>
 
-    <!-- Projects Grid -->
-    <section class="projects-grid">
+    <!-- Projects Section -->
+    <section class="projects-section">
         <div class="container">
-            <!-- Project 1 -->
-            <div class="project-card animate-on-scroll">
-                <div class="project-image">
-                    <img src="/api/placeholder/600/400" alt="Analyse prédictive">
-                </div>
-                <div class="project-content">
-                    <h3>Prédiction des Ventes E-commerce</h3>
-                    <p>Développement d'un modèle de machine learning pour prédire les ventes futures basé sur les données historiques et les tendances saisonnières.</p>
-                    <div class="tech-stack">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">Time Series</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code source</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
+            <!-- Project Filters -->
+            <div class="project-filters animate-on-scroll">
+                <button class="filter-tag active" data-filter="all">Tous</button>
+                <button class="filter-tag" data-filter="machine-learning">Machine Learning</button>
+                <button class="filter-tag" data-filter="nlp">NLP</button>
+                <button class="filter-tag" data-filter="clustering">Clustering</button>
+            </div>
+
+            <!-- Projects Search -->
+            <div class="projects-search animate-on-scroll">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="project-search" placeholder="Rechercher un projet...">
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-card animate-on-scroll">
-                <div class="project-image">
-                    <img src="/api/placeholder/600/400" alt="NLP Analysis">
-                </div>
-                <div class="project-content">
-                    <h3>Analyse de Sentiments sur Twitter</h3>
-                    <p>Création d'un modèle NLP pour analyser les sentiments des tweets en temps réel concernant des sujets spécifiques.</p>
-                    <div class="tech-stack">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">NLTK</span>
-                        <span class="skill-tag">Transformers</span>
-                        <span class="skill-tag">Twitter API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code source</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card animate-on-scroll">
-                <div class="project-image">
-                    <img src="/api/placeholder/600/400" alt="Clustering Analysis">
-                </div>
-                <div class="project-content">
-                    <h3>Segmentation Client</h3>
-                    <p>Application de techniques de clustering pour segmenter la base client d'une entreprise e-commerce.</p>
-                    <div class="tech-stack">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">K-means</span>
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Seaborn</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code source</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </div>
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Projects will be dynamically inserted here by JavaScript -->
             </div>
         </div>
     </section>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/projects.js"></script>
 </body>

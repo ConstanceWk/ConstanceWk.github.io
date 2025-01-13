@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos | Data Science Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/main.css" rel="stylesheet">
     <link href="../assets/css/components.css" rel="stylesheet">
@@ -21,86 +23,119 @@
         </div>
     </nav>
 
-    <!-- About Section -->
-    <section class="about-section">
+    <!-- About Hero Section -->
+    <section class="about-hero">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text fade-in">
-                    <h1>À propos de moi</h1>
+            <div class="about-content animate-on-scroll">
+                <h1>À propos de <span class="gradient-text">moi</span></h1>
+                <div class="about-description">
                     <p class="lead">Data Scientist passionnée par l'analyse de données et l'intelligence artificielle</p>
-                    <p>Avec une formation en statistiques et en programmation, je transforme les données en insights actionnables pour aider les entreprises à prendre de meilleures décisions.</p>
+                    <p>Spécialisée dans le développement de solutions basées sur le machine learning et l'analyse de données complexes.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Parcours académique -->
-            <div class="education-section animate-on-scroll">
-                <h2>Parcours Académique</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2023</div>
-                        <div class="timeline-content">
-                            <h3>Master en Data Science</h3>
-                            <p>Université de Paris</p>
-                            <ul>
-                                <li>Spécialisation en Machine Learning</li>
-                                <li>Projet de fin d'études sur l'analyse prédictive</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-date">2021</div>
-                        <div class="timeline-content">
-                            <h3>Licence en Mathématiques Appliquées</h3>
-                            <p>Université de Lyon</p>
-                            <ul>
-                                <li>Option Statistiques et Probabilités</li>
-                                <li>Minor en Informatique</li>
-                            </ul>
-                        </div>
+    <!-- Education Timeline -->
+    <section class="education-section">
+        <div class="container">
+            <h2>Parcours <span class="gradient-text">Académique</span></h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Master en Data Science</h3>
+                        <p class="institution">Université de Paris</p>
+                        <ul>
+                            <li>Spécialisation en Machine Learning et Deep Learning</li>
+                            <li>Projet de recherche sur les réseaux de neurones</li>
+                            <li>Stage en entreprise dans l'analyse prédictive</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
 
-            <!-- Compétences -->
-            <div class="skills-section animate-on-scroll">
-                <h2>Compétences Techniques</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Langages de Programmation</h3>
-                        <div class="skill-list">
-                            <div class="skill-item">
-                                <span class="skill-name">Python</span>
-                                <div class="skill-bar" data-level="90"></div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">R</span>
-                                <div class="skill-bar" data-level="85"></div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">SQL</span>
-                                <div class="skill-bar" data-level="80"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="skill-category">
-                        <h3>Data Science & ML</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">Scikit-learn</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">Pandas</span>
-                            <span class="skill-tag">NumPy</span>
-                            <span class="skill-tag">Matplotlib</span>
-                            <span class="skill-tag">Deep Learning</span>
-                        </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3>Licence en Mathématiques Appliquées</h3>
+                        <p class="institution">Université de Lyon</p>
+                        <ul>
+                            <li>Option Statistiques et Probabilités</li>
+                            <li>Minor en Informatique</li>
+                            <li>Projet sur l'analyse de données</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section class="skills-detailed">
+        <div class="container">
+            <h2>Compétences <span class="gradient-text">Techniques</span></h2>
+            <div class="skills-grid">
+                <div class="skill-category animate-on-scroll">
+                    <h3>Languages de Programmation</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>R</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>SQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3>Data Science & ML</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Matplotlib</span>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <h3>Outils & Technologies</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Jupyter</span>
+                        <span class="tech-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/animations.js"></script>
 </body>
 </html>

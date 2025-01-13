@@ -4,18 +4,15 @@
     width: 100%;
     top: 0;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem 5%;
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .nav-brand {
     font-size: 2rem;
     font-weight: bold;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -24,46 +21,42 @@
     text-decoration: none;
     color: var(--text);
     margin-left: 2rem;
-    transition: color 0.3s ease;
+    position: relative;
 }
 
 /* Buttons */
 .cta-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white;
+    border-radius: 50px;
+    border: none;
+    font-weight: 500;
     text-decoration: none;
-    border-radius: 30px;
-    transition: transform 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.cta-button:hover {
-    transform: translateY(-3px);
+.cta-button.primary {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--text);
 }
 
 /* Cards */
-.card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* Project Cards */
 .project-card {
     background: white;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.project-card img {
+.project-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -73,13 +66,64 @@
     padding: 2rem;
 }
 
-/* Skill Tags */
+/* Skills */
+.skill-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.skill-bar {
+    height: 6px;
+    background: var(--background);
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+/* Contact Form */
+.contact-form {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--background);
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+/* Tags */
 .skill-tag {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: var(--primary);
-    color: white;
+    background: var(--background);
     border-radius: 20px;
     margin: 0.25rem;
     font-size: 0.9rem;
+}
+
+/* Glass Morphism */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }

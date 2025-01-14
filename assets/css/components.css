@@ -1,8 +1,13 @@
 /* Projects Page Styles */
 .projects-container {
-    padding: 120px 5% 60px;
+    padding: 180px 5% 60px; /* Augmenté pour plus d'espace en haut */
     max-width: 1400px;
     margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 80px;
+    text-align: center;
 }
 
 .projects-title {
@@ -95,6 +100,10 @@
 }
 
 @media (max-width: 768px) {
+    .projects-container {
+        padding-top: 150px; /* Ajusté pour mobile */
+    }
+    
     .projects-title {
         font-size: 3rem;
     }

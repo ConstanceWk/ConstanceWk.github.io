@@ -11,16 +11,22 @@
     <link href="assets/css/animations.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Fond animé avec des bulles -->
-    <div class="animated-background">
-        <div class="gradient-bg"></div>
-        <div class="moving-bubbles">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-        </div>
+    <!-- Bulles d'arrière-plan -->
+    <div class="bubble-background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Icônes flottantes -->
+    <div class="floating-icons">
+        <i class="fas fa-python tech-icon" style="--delay: 0s; --top: 15%;"></i>
+        <i class="fas fa-database tech-icon" style="--delay: 2s; --top: 25%;"></i>
+        <i class="fas fa-brain tech-icon" style="--delay: 4s; --top: 35%;"></i>
+        <i class="fas fa-chart-line tech-icon" style="--delay: 6s; --top: 45%;"></i>
+        <i class="fas fa-laptop-code tech-icon" style="--delay: 8s; --top: 55%;"></i>
     </div>
 
     <!-- Navigation -->
@@ -28,60 +34,48 @@
         <div class="nav-brand">CW</div>
         <div class="nav-links">
             <a href="index.html" class="active">Accueil</a>
+            <a href="pages/competences.html">Compétences</a>
             <a href="pages/projects.html">Projets</a>
             <a href="pages/about.html">À propos</a>
             <a href="pages/contact.html">Contact</a>
         </div>
-        <button class="nav-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
     </nav>
 
     <!-- Hero Section -->
     <main class="hero">
         <div class="container">
-            <div class="hero-content">
-                <!-- Image de profil avec effet de vague -->
-                <div class="profile-wrapper">
-                    <div class="profile-blob">
+            <div class="hero-grid">
+                <!-- Photo de profil -->
+                <div class="profile-side">
+                    <div class="profile-container">
                         <img src="assets/img/photo_profil.png" alt="Constance W." class="profile-image">
                     </div>
-                    <div class="blob-animation"></div>
                 </div>
 
-                <!-- Contenu textuel -->
-                <div class="content-wrapper">
-                    <h1>Constance W.</h1>
-                    <h2 class="gradient-text">Data Scientist</h2>
-                    <p class="hero-description">
-                        Passionnée par l'analyse de données et le machine learning,
-                        je transforme des données complexes en solutions concrètes.
+                <!-- Contenu -->
+                <div class="content-side">
+                    <h1 class="main-title">Data Scientist</h1>
+                    <h2 class="gradient-subtitle">Transforming Data into Insights</h2>
+                    <p class="description">
+                        Spécialisée en analyse de données et machine learning
                     </p>
 
-                    <div class="cta-group">
-                        <a href="#" class="cta-button primary glass">
-                            <i class="fas fa-download"></i>
-                            Télécharger CV
-                        </a>
-                        <a href="pages/projects.html" class="cta-button secondary glass">
-                            <i class="fas fa-project-diagram"></i>
-                            Voir mes projets
-                        </a>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">ML</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Data</span>
                     </div>
 
-                    <div class="stats-wrapper">
-                        <div class="stat-item glass">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Années d'expérience</span>
-                        </div>
-                        <div class="stat-item glass">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Projets complétés</span>
-                        </div>
-                        <div class="stat-item glass">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Publications</span>
-                        </div>
+                    <div class="cta-buttons">
+                        <a href="pages/projects.html" class="cta-button primary">
+                            Voir mes projets
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="pages/contact.html" class="cta-button secondary">
+                            Me contacter
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
                     </div>
                 </div>
             </div>

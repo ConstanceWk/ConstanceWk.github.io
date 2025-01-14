@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constance W. | Data Scientist</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
@@ -12,89 +11,77 @@
     <link href="assets/css/animations.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Bulles d'arrière-plan -->
+    <div class="bubbles-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">CW</div>
-            <div class="nav-links">
-                <a href="index.html" class="active">Accueil</a>
-                <a href="pages/projects.html">Projets</a>
-                <a href="pages/about.html">À propos</a>
-                <a href="pages/contact.html">Contact</a>
-            </div>
-            <button class="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
+        <div class="nav-brand">CW</div>
+        <div class="nav-links">
+            <a href="#home" class="active">Accueil</a>
+            <a href="#competences">Compétences</a>
+            <a href="#projects">Projets</a>
+            <a href="#about">À propos</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="container">
-            <div class="hero-grid">
-                <!-- Photo de profil -->
-                <div class="hero-image animate-fade-in">
-                    <div class="profile-circle">
-                        <img src="/api/placeholder/400/400" alt="Constance W." class="profile-img">
-                        <div class="profile-badge">DS</div>
+            <div class="hero-content">
+                <div class="profile-container">
+                    <div class="profile-sphere">
+                        <img src="assets/img/photo_profil.png" alt="Constance W." class="profile-img">
+                        <div class="orbit">
+                            <div class="skill-orbit-item" style="--i:0">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-orbit-item" style="--i:1">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-orbit-item" style="--i:2">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="skill-orbit-item" style="--i:3">
+                                <i class="fas fa-chart-network"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Contenu principal -->
-                <div class="hero-content animate-fade-in">
-                    <h1 class="gradient-title">Constance W.</h1>
-                    <h2>Data Scientist</h2>
-                    <p class="hero-description">
-                        Passionnée par l'analyse de données et le machine learning,
-                        je transforme des données complexes en solutions concrètes.
-                    </p>
+                <div class="hero-text">
+                    <h1 class="glitch-text">Data Scientist</h1>
+                    <h2 class="gradient-text">Transforming Data into Insights</h2>
+                    <p class="hero-description">Spécialisée en analyse de données et machine learning</p>
                     
-                    <!-- Boutons d'action -->
-                    <div class="cta-group">
-                        <a href="#" class="cta-button primary">
-                            <i class="fas fa-download"></i>
-                            Télécharger CV
+                    <div class="cta-container">
+                        <a href="#projects" class="cta-button primary">
+                            <span>Voir mes projets</span>
+                            <i class="fas fa-arrow-right"></i>
                         </a>
-                        <a href="pages/projects.html" class="cta-button secondary">
-                            <i class="fas fa-project-diagram"></i>
-                            Voir mes projets
-                        </a>
-                    </div>
-
-                    <!-- Réseaux sociaux -->
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fas fa-envelope"></i>
+                        <a href="#contact" class="cta-button secondary">
+                            <span>Me contacter</span>
+                            <i class="fas fa-paper-plane"></i>
                         </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Statistiques -->
-            <div class="stats-grid animate-fade-in">
-                <div class="stat-card">
-                    <h3>3+</h3>
-                    <p>Années d'expérience</p>
-                </div>
-                <div class="stat-card">
-                    <h3>15+</h3>
-                    <p>Projets complétés</p>
-                </div>
-                <div class="stat-card">
-                    <h3>5+</h3>
-                    <p>Publications</p>
-                </div>
+            
+            <div class="floating-tech">
+                <div class="tech-bubble" style="--delay:0s">Python</div>
+                <div class="tech-bubble" style="--delay:1s">ML</div>
+                <div class="tech-bubble" style="--delay:2s">SQL</div>
+                <div class="tech-bubble" style="--delay:3s">Data</div>
             </div>
         </div>
     </section>
-
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/animations.js"></script>
 </body>
 </html>

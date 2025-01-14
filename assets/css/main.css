@@ -149,32 +149,37 @@ body {
     align-items: center;
 }
 
-/* Profile Section */
-.profile-side {
-    position: relative;
-}
-
+/* Profile Section avec effet blob */
 .profile-container {
     width: 400px;
     height: 400px;
     position: relative;
     margin: 0 auto;
+    filter: drop-shadow(0px 10px 20px rgba(108, 99, 255, 0.2));
 }
 
 .profile-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    animation: morphing 10s ease-in-out infinite;
+    animation: blobAnimation 20s ease-in-out infinite;
     overflow: hidden;
-    box-shadow: 0 5px 25px rgba(108, 99, 255, 0.2);
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
 }
 
 .profile-image {
-    width: 100%;
-    height: 100%;
+    width: 102%;
+    height: 102%;
     object-fit: cover;
+    transform: scale(1.1);  /* Légère mise à l'échelle pour éviter les bords blancs */
+}
+
+@keyframes blobAnimation {
+    0% { border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%; }
+    25% { border-radius: 56% 42% 48% 72% / 56% 48% 42% 42%; }
+    50% { border-radius: 42% 72% 28% 56% / 42% 56% 48% 42%; }
+    75% { border-radius: 72% 28% 56% 42% / 48% 42% 56% 42%; }
+    100% { border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%; }
 }
 
 /* Content Side */

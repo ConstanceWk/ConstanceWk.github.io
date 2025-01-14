@@ -5,7 +5,7 @@
     --gradient-start: #4F46E5;
     --gradient-middle: #9333EA;
     --gradient-end: #EC4899;
-    --background: #f5f3ff;
+    --background: #ffffff;
     --text: #2D3748;
     --text-light: #4A5568;
 }
@@ -149,39 +149,34 @@ body {
     align-items: center;
 }
 
-/* Profile Section avec effet blob */
+/* Profile Section */
 .profile-container {
     width: 400px;
     height: 400px;
     position: relative;
     margin: 0 auto;
-    filter: drop-shadow(0px 10px 20px rgba(108, 99, 255, 0.2));
 }
 
 .profile-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
-    animation: blobAnimation 20s ease-in-out infinite;
     overflow: hidden;
-    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
 }
 
 .profile-image {
-    width: 102%;
-    height: 102%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transform: scale(1.1);  /* Légère mise à l'échelle pour éviter les bords blancs */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite;
 }
 
-@keyframes blobAnimation {
-    0% { border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%; }
-    25% { border-radius: 56% 42% 48% 72% / 56% 48% 42% 42%; }
-    50% { border-radius: 42% 72% 28% 56% / 42% 56% 48% 42%; }
-    75% { border-radius: 72% 28% 56% 42% / 48% 42% 56% 42%; }
-    100% { border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%; }
+@keyframes morph {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
 }
-
 /* Content Side */
 .content-side {
     max-width: 600px;

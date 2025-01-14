@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets | Data Science Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Projets | Constance W.</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/main.css" rel="stylesheet">
@@ -12,6 +11,15 @@
     <link href="../assets/css/animations.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Bulles d'arrière-plan -->
+    <div class="bubble-background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-brand">CW</div>
@@ -23,43 +31,74 @@
         </div>
     </nav>
 
-    <!-- Projects Header -->
-    <header class="projects-header">
-        <div class="container">
-            <h1 class="animate-on-scroll">Projets <span class="gradient-text">Data Science</span></h1>
-            <p class="lead">Découvrez mes réalisations en analyse de données et machine learning</p>
-        </div>
-    </header>
+    <main class="projects-container">
+        <h1 class="projects-title">Projets</h1>
+        <p class="projects-subtitle">Découvrez mes réalisations en Data Science</p>
 
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <div class="container">
-            <!-- Project Filters -->
-            <div class="project-filters animate-on-scroll">
-                <button class="filter-tag active" data-filter="all">Tous</button>
-                <button class="filter-tag" data-filter="machine-learning">Machine Learning</button>
-                <button class="filter-tag" data-filter="nlp">NLP</button>
-                <button class="filter-tag" data-filter="clustering">Clustering</button>
-            </div>
-
-            <!-- Projects Search -->
-            <div class="projects-search animate-on-scroll">
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="project-search" placeholder="Rechercher un projet...">
+        <div class="projects-grid">
+            <!-- Projet 1 -->
+            <article class="project-card">
+                <div class="project-content">
+                    <h2>Prédiction des Ventes E-commerce</h2>
+                    <p>Développement d'un modèle de machine learning pour prédire les ventes futures basé sur les données historiques et les tendances saisonnières.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Time Series</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-            <!-- Projects Grid -->
-            <div class="projects-grid">
-                <!-- Projects will be dynamically inserted here by JavaScript -->
-            </div>
+            <!-- Projet 2 -->
+            <article class="project-card">
+                <div class="project-content">
+                    <h2>Analyse de Sentiments NLP</h2>
+                    <p>Application d'analyse de sentiments en temps réel sur les réseaux sociaux utilisant des techniques de NLP avancées.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLTK</span>
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">SpaCy</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 3 -->
+            <article class="project-card">
+                <div class="project-content">
+                    <h2>Segmentation Client</h2>
+                    <p>Clustering de clients pour optimiser les stratégies marketing basé sur le comportement d'achat.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">K-means</span>
+                        <span class="tech-tag">Matplotlib</span>
+                        <span class="tech-tag">Seaborn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </article>
         </div>
-    </section>
+    </main>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/projects.js"></script>
+    <script src="../assets/js/animations.js"></script>
 </body>
 </html>

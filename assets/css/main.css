@@ -225,26 +225,34 @@ body {
     gap: 1rem;
 }
 
+/* Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
 .cta-button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 50px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
-.cta-button.primary {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+.cta-button:hover {
+    background: var(--primary);
     color: white;
 }
 
-.cta-button.secondary {
-    background: transparent;
-    border: 2px solid var(--primary);
-    color: var(--primary);
+.cta-button i {
+    font-size: 0.9rem;
 }
 
 /* Animations */

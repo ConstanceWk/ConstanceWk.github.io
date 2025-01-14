@@ -1,237 +1,249 @@
-/* Styles de base modernisés */
 :root {
-    --primary: #6C63FF;
-    --secondary: #FF6584;
-    --dark: #2A2A2A;
-    --light: #FFFFFF;
-    --gradient: linear-gradient(135deg, #6C63FF, #FF6584);
+    --gradient-1: #4F46E5;
+    --gradient-2: #EC4899;
+    --gradient-3: #7C3AED;
+    --surface: rgba(255, 255, 255, 0.1);
+    --glass: rgba(255, 255, 255, 0.1);
+    --text: #FFFFFF;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(135deg, #0F172A, #1E293B);
-    color: var(--light);
     font-family: 'Space Grotesk', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
     overflow-x: hidden;
+    background: #0F172A;
 }
 
-/* Bulles d'arrière-plan */
-.bubbles-container {
+/* Fond animé avec dégradé */
+.animated-background {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     z-index: -1;
+    overflow: hidden;
+}
+
+.gradient-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+    opacity: 0.8;
+}
+
+/* Animation des bulles */
+.moving-bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .bubble {
     position: absolute;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(255, 101, 132, 0.1));
-    backdrop-filter: blur(5px);
     border-radius: 50%;
-    animation: float 20s linear infinite;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2), transparent);
+    backdrop-filter: blur(5px);
+    animation: float 20s infinite;
 }
 
-.bubble:nth-child(1) { width: 100px; height: 100px; left: 10%; animation-delay: 0s; }
-.bubble:nth-child(2) { width: 150px; height: 150px; left: 30%; animation-delay: 2s; }
-.bubble:nth-child(3) { width: 80px; height: 80px; left: 50%; animation-delay: 4s; }
-.bubble:nth-child(4) { width: 120px; height: 120px; left: 70%; animation-delay: 6s; }
-.bubble:nth-child(5) { width: 90px; height: 90px; left: 90%; animation-delay: 8s; }
-.bubble:nth-child(6) { width: 130px; height: 130px; left: 20%; animation-delay: 10s; }
+.bubble:nth-child(1) { width: 300px; height: 300px; left: 10%; top: 10%; animation-delay: 0s; }
+.bubble:nth-child(2) { width: 200px; height: 200px; left: 50%; top: 20%; animation-delay: -5s; }
+.bubble:nth-child(3) { width: 150px; height: 150px; left: 80%; top: 30%; animation-delay: -10s; }
+.bubble:nth-child(4) { width: 250px; height: 250px; left: 30%; top: 60%; animation-delay: -15s; }
+.bubble:nth-child(5) { width: 180px; height: 180px; left: 70%; top: 70%; animation-delay: -20s; }
+
+/* Effet verre */
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 /* Hero Section */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 100px 0;
+    padding: 120px 0 60px;
 }
 
 .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
     gap: 4rem;
+    align-items: center;
 }
 
-/* Profile Sphere */
-.profile-container {
+/* Profile Image Styling */
+.profile-wrapper {
     position: relative;
     width: 400px;
     height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
 }
 
-.profile-sphere {
+.profile-blob {
     position: relative;
-    width: 300px;
-    height: 300px;
-    animation: floatProfile 6s ease-in-out infinite;
-}
-
-.profile-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--primary);
-    box-shadow: 0 0 30px rgba(108, 99, 255, 0.3);
-}
-
-/* Orbite des compétences */
-.orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    height: 400px;
-    transform: translate(-50%, -50%);
-    animation: rotate 20s linear infinite;
-}
-
-.skill-orbit-item {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: var(--light);
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(-50%, -50%) rotate(calc(var(--i) * 90deg)) translateX(200px);
+    animation: morphBlob 20s ease-in-out infinite;
 }
 
-.skill-orbit-item i {
-    color: var(--primary);
-    font-size: 1.5rem;
+.profile-image {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    animation: morphImage 20s ease-in-out infinite;
 }
 
-/* Texte héro */
-.hero-text {
-    flex: 1;
-}
-
-.glitch-text {
+/* Text Content */
+.content-wrapper h1 {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    position: relative;
-    animation: glitch 3s infinite;
 }
 
 .gradient-text {
     font-size: 2.5rem;
-    background: var(--gradient);
+    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
     -webkit-background-clip: text;
     color: transparent;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Bulles technologiques flottantes */
-.floating-tech {
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    bottom: 0;
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
 }
 
-.tech-bubble {
-    position: absolute;
+/* Buttons */
+.cta-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
     border-radius: 50px;
-    animation: floatBubble 4s ease-in-out infinite;
-    animation-delay: var(--delay);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+    color: white;
+}
+
+.cta-button.secondary {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Stats */
+.stats-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-item {
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
 /* Animations */
 @keyframes float {
     0%, 100% {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-100px) scale(1.1);
     }
 }
 
-@keyframes rotate {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-@keyframes floatProfile {
+@keyframes morphBlob {
     0%, 100% {
-        transform: translateY(0);
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
     50% {
-        transform: translateY(-15px);
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
     }
 }
 
-@keyframes floatBubble {
+@keyframes morphImage {
     0%, 100% {
-        transform: translate(0, 0);
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
     50% {
-        transform: translate(20px, -20px);
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
     }
 }
 
-@keyframes glitch {
-    0% {
-        text-shadow: 2px 0 var(--primary), -2px 0 var(--secondary);
-    }
-    25% {
-        text-shadow: -2px 0 var(--primary), 2px 0 var(--secondary);
-    }
-    50% {
-        text-shadow: 2px 0 var(--primary), -2px 0 var(--secondary);
-    }
-    75% {
-        text-shadow: -2px 0 var(--primary), 2px 0 var(--secondary);
-    }
-    100% {
-        text-shadow: 2px 0 var(--primary), -2px 0 var(--secondary);
-    }
-}
-
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 992px) {
     .hero-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .profile-container {
+    .profile-wrapper {
         width: 300px;
         height: 300px;
+        margin-bottom: 2rem;
     }
 
-    .profile-sphere {
-        width: 250px;
-        height: 250px;
-    }
-
-    .orbit {
-        width: 300px;
-        height: 300px;
-    }
-
-    .skill-orbit-item {
-        transform: translate(-50%, -50%) rotate(calc(var(--i) * 90deg)) translateX(150px);
-    }
-
-    .glitch-text {
+    .content-wrapper h1 {
         font-size: 3rem;
     }
 
     .gradient-text {
         font-size: 2rem;
+    }
+
+    .cta-group {
+        justify-content: center;
+    }
+
+    .stats-wrapper {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
     }
 }

@@ -160,3 +160,31 @@
             observer.observe(item);
         });
     });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Observer existant pour la timeline
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '-50px'
+        };
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+    
+        // Pour la timeline
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            observer.observe(item);
+        });
+    
+        // Pour les sections de compétences
+        document.querySelectorAll('.skill-item-animated').forEach(item => {
+            observer.observe(item);
+        });
+    });

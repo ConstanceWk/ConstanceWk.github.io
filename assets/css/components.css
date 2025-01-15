@@ -378,7 +378,10 @@
     }
 }
 
-
+.animate-on-scroll {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
 
 /* Classe pour l'animation */
 .timeline-item.animate {

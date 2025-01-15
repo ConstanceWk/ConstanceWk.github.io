@@ -152,39 +152,13 @@
             });
         }, observerOptions);
     
-        // Sélectionnez tous les éléments .timeline-item
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        
-        // Observez chaque élément
-        timelineItems.forEach(item => {
-            observer.observe(item);
-        });
-    });
-
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // Observer existant pour la timeline
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '-50px'
-        };
-    
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-    
         // Pour la timeline
         document.querySelectorAll('.timeline-item').forEach(item => {
             observer.observe(item);
         });
     
-        // Pour les sections de compétences
-        document.querySelectorAll('.skill-item-animated').forEach(item => {
+        // Pour les catégories de compétences
+        document.querySelectorAll('.skill-category').forEach(item => {
             observer.observe(item);
         });
     });

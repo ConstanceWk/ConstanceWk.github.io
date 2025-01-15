@@ -272,21 +272,14 @@
     transform: translateY(30px);
 }
 
-/* Animation quand la classe animate est ajoutée */
-.skill-category.skill-item-animated.animate {
+.skill-category.animate {
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Délais d'animation pour chaque section */
-.skill-category.skill-item-animated:nth-child(1).animate { 
-    animation-delay: 0.2s; 
-}
-.skill-category.skill-item-animated:nth-child(2).animate { 
-    animation-delay: 0.4s; 
-}
-.skill-category.skill-item-animated:nth-child(3).animate { 
-    animation-delay: 0.6s; 
-}
+/* Délais d'animation pour chaque catégorie */
+.skill-category:nth-child(1).animate { animation-delay: 0.2s; }
+.skill-category:nth-child(2).animate { animation-delay: 0.4s; }
+.skill-category:nth-child(3).animate { animation-delay: 0.6s; }
 
 .skill-category:hover {
     transform: translateY(-5px);

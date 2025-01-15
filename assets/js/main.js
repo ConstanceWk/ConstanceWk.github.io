@@ -151,14 +151,14 @@
                 }
             });
         }, observerOptions);
-    
+        // Pour les catégories de compétences
+        document.querySelectorAll('.skill-category').forEach(item => {
+            observer.observe(item);
+        });
         // Pour la timeline
         document.querySelectorAll('.timeline-item').forEach(item => {
             observer.observe(item);
         });
     
-        // Pour les catégories de compétences
-        document.querySelectorAll('.skill-category').forEach(item => {
-            observer.observe(item);
-        });
+        
     });

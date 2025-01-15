@@ -353,25 +353,11 @@
     box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
 }
 
-/* Timeline Animation Styles */
-.timeline-item {
-    margin-bottom: 60px;
-    position: relative;
-    opacity: 0;
-    transform: translateY(50px);
-    visibility: hidden; /* Cache initialement l'élément */
-}
-
-/* Animation when element becomes visible */
-.timeline-item.animate-visible {
-    animation: fadeSlideIn 0.6s ease forwards;
-    visibility: visible; /* Rend l'élément visible lors de l'animation */
-}
-
-@keyframes fadeSlideIn {
+/* Animations */
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -379,11 +365,10 @@
     }
 }
 
-/* Délais d'animation pour chaque élément */
-.timeline-item:nth-child(1).animate-visible { animation-delay: 0.2s; }
-.timeline-item:nth-child(2).animate-visible { animation-delay: 0.4s; }
-.timeline-item:nth-child(3).animate-visible { animation-delay: 0.6s; }
-.timeline-item:nth-child(4).animate-visible { animation-delay: 0.8s; }
+.animate-on-scroll {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
 
 
 

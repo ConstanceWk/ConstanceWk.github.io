@@ -126,29 +126,7 @@ function initParticles() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Configuration de l'Intersection Observer
-    const observerOptions = {
-        root: null,
-        threshold: 0.1, // Déclenche quand 10% de l'élément est visible
-        rootMargin: '-50px' // Déclenche un peu avant que l'élément soit visible
-    };
 
-    // Observer pour les éléments de la timeline
-    const timelineObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-visible');
-                timelineObserver.unobserve(entry.target); // Animation une seule fois
-            }
-        });
-    }, observerOptions);
-
-    // Applique l'observer à tous les éléments de la timeline
-    document.querySelectorAll('.timeline-item').forEach((item) => {
-        timelineObserver.observe(item);
-    });
-});
 
 // Initialisation des particules si le conteneur existe
 document.addEventListener('DOMContentLoaded', initParticles);

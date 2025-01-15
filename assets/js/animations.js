@@ -126,59 +126,30 @@ function initParticles() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Configuration de l'Intersection Observer
+    const observerOptions = {
+        root: null,
+        threshold: 0.1, // Déclenche quand 10% de l'élément est visible
+        rootMargin: '-50px' // Déclenche un peu avant que l'élément soit visible
+    };
+
+    // Observer pour les éléments de la timeline
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-visible');
+                timelineObserver.unobserve(entry.target); // Animation une seule fois
+            }
+        });
+    }, observerOptions);
+
+    // Applique l'observer à tous les éléments de la timeline
+    document.querySelectorAll('.timeline-item').forEach((item) => {
+        timelineObserver.observe(item);
+    });
+});
+
 // Initialisation des particules si le conteneur existe
 document.addEventListener('DOMContentLoaded', initParticles);
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Classes d'animation */
-.animate-hidden {
-    opacity: 0;
-}
-
-.animate-visible {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-.timeline-visible {
-    animation: slideIn 0.6s ease forwards;
-}
-
-/* Animation des skills */
-.animate-skill-bar {
-    animation: fillBar 1s ease forwards;
-}
-
-@keyframes fillBar {
-    from { width: 0; }
-    to { width: var(--level); }
-}
-
-/* Animation du texte au hover */
-.hover-highlight {
-    transition: color 0.3s ease;
-}
-
-.hover-highlight:hover {
-    color: var(--primary);
-}

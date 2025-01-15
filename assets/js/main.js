@@ -136,27 +136,3 @@
         }
     }
 
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '-50px'
-        };
-    
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-    
-        // Sélectionnez tous les éléments .timeline-item
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        
-        // Observez chaque élément
-        timelineItems.forEach(item => {
-            observer.observe(item);
-        });
-    });

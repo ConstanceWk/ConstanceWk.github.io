@@ -178,7 +178,12 @@
     position: relative;
     opacity: 0;
     visibility: hidden;
-    animation: fadeInUp 0.6s ease forwards;
+    transform: translateY(30px);
+}
+
+/* Animation quand la classe animate est ajoutée */
+.timeline-item.animate {
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .timeline-date {
@@ -378,15 +383,7 @@
     }
 }
 
-.animate-on-scroll {
-    opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
-}
 
-/* Classe pour l'animation */
-.timeline-item.animate {
-    animation: fadeInUp 0.6s ease-out forwards;
-}
 
 /* Délais d'animation pour chaque item */
 .timeline-item:nth-child(1).animate { animation-delay: 0.2s; }

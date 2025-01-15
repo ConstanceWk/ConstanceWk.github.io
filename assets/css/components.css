@@ -158,7 +158,7 @@
     margin: 0 auto;
     padding: 40px 20px;
 }
-
+        /* Ligne verticale centrale */
 .timeline::before {
     content: '';
     position: absolute;
@@ -227,6 +227,16 @@
     color: var(--primary);
     position: absolute;
     left: 0;
+}
+/* Alternance gauche/droite */
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    margin-right: 0;
 }
 
 /* Skills Section */

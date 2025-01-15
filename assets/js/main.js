@@ -135,3 +135,24 @@ if(themeToggle) {
         themeToggle.querySelector('i').className = 'fas fa-sun';
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Observer pour l'animation au scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target); // Animation une seule fois
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '-50px'
+    });
+
+    // Application de l'observer aux éléments de la timeline
+    document.querySelectorAll('.timeline-item').forEach(item => {
+        observer.observe(item);
+    });
+});

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activités Personnelles - Constance Walusiak</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="stylesheet" href="../assets/css/perso.css">
+    <style>
+        /* Style supplémentaire pour le carrousel */
+        .carousel-slide {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .carousel-slide img, .carousel-slide video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bulles d'arrière-plan -->
+    <div class="bubble-background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Icônes flottantes -->
+    <div class="floating-icons">
+        <i class="fas fa-python tech-icon"></i>
+        <i class="fas fa-database tech-icon"></i>
+        <i class="fas fa-brain tech-icon"></i>
+        <i class="fas fa-chart-line tech-icon"></i>
+        <i class="fas fa-laptop-code tech-icon"></i>
+        <i class="fas fa-server tech-icon"></i>
+        <i class="fas fa-network-wired tech-icon"></i>
+        <i class="fas fa-code-branch tech-icon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">CW</div>
+        <div class="nav-links">
+            <a href="../index.html">Accueil</a>
+            <a href="projects.html">Projets</a>
+            <a href="about.html">À propos</a>
+            <a href="perso.html" class="active">Activités</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <!-- En-tête de la page -->
+        <section class="page-header">
+            <h1 class="page-title">Activités Personnelles</h1>
+            <p class="page-subtitle">Découvrez mes engagements et réalisations en dehors de mes études</p>
+        </section>
+
+        <!-- Section principale: Responsable Communication & Design -->
+        <section class="role-section">
+            <div class="role-info">
+                <h2 class="role-title">Responsable Communication & Design</h2>
+                <h3 class="role-subtitle">Bureau des Sports - <a href="https://www.efrei.fr" target="_blank">EFREI Paris</a></h3>
+                
+                <p class="role-description">
+                    En tant que Responsable Communication & Design au Bureau des Sports de l'EFREI, 
+                    je suis chargée de valoriser les événements sportifs et promouvoir les activités 
+                    proposées aux étudiants. Mon rôle comprend la conception graphique, la gestion 
+                    des réseaux sociaux et l'élaboration de stratégies de communication efficaces.
+                </p>
+                
+                <div class="role-tags">
+                    <span class="role-tag">Design Graphique</span>
+                    <span class="role-tag">Communication</span>
+                    <span class="role-tag">Événementiel</span>
+                    <span class="role-tag">Réseaux Sociaux</span>
+                </div>
+            </div>
+
+            <div class="visuals-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide" id="carousel">
+                        <!-- L'image sera chargée dynamiquement par JavaScript -->
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <div class="carousel-nav prev-btn" id="prevBtn">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        
+                        <div class="carousel-indicators" id="carouselIndicators">
+                            <div class="carousel-indicator active"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                            <div class="carousel-indicator"></div>
+                        </div>
+                        
+                        <div class="carousel-nav next-btn" id="nextBtn">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Autres Engagements -->
+        <section class="other-engagements">
+            <h2 class="section-title">Autres Engagements</h2>
+            
+            <div class="engagements-grid">
+                <div class="engagement-card">
+                    <div class="engagement-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="engagement-title">Vidéographie, Photographie</h3>
+                    <p class="engagement-description">
+                        Passionnée de création visuelle, j'adore filmer et monter des vidéos de mes voyages et de mes amis. 
+                        La vidéographie et la photographie me permettent de raconter des histoires visuelles à travers mes 
+                        expériences et de capturer des moments précieux pour les partager avec les autres.
+                    </p>
+                </div>
+                
+                <div class="engagement-card">
+                    <div class="engagement-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3 class="engagement-title">Sport</h3>
+                    <p class="engagement-description">
+                        J'ai pratiqué de nombreux sports au fil des années, notamment l'équitation pendant 7 ans, 
+                        le cheerleading au sein de l'équipe de l'école pendant 3 ans, ainsi que la course à pied. 
+                        Ces activités m'ont appris la discipline, l'esprit d'équipe et le dépassement de soi.
+                    </p>
+                </div>
+                
+                <div class="engagement-card">
+                    <div class="engagement-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="engagement-title">Travaux Manuels</h3>
+                    <p class="engagement-description">
+                        J'adore découvrir et explorer de nouvelles activités manuelles : peinture, dessin, crochet, 
+                        cuisine... Ces loisirs créatifs me permettent de développer ma patience, ma créativité et 
+                        de me détendre tout en créant quelque chose de mes propres mains.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Constance Walusiak - Tous droits réservés</p>
+            <div class="social-links">
+                <a href="https://github.com/ConstanceWk" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/constance-walusiak" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script pour le carrousel -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuration du carrousel avec toutes les ressources multimédia
+            const slides = [
+                {
+                    type: "image",
+                    src: "../assets/Visu_BDS/1.jpg",
+                    alt: "Visuel BDS 1"
+                },
+                {
+                    type: "image",
+                    src: "../assets/Visu_BDS/3.png",
+                    alt: "Visuel BDS 2"
+                },
+                {
+                    type: "image",
+                    src: "../assets/Visu_BDS/4.png",
+                    alt: "Visuel BDS 3"
+                },
+                {
+                    type: "image",
+                    src: "../assets/Visu_BDS/ANNONCE.png",
+                    alt: "Annonce BDS"
+                },
+                {
+                    type: "image",
+                    src: "../assets/Visu_BDS/TELE.png",
+                    alt: "Commu Whatsapp"
+                }
+            ];
+            
+            // Éléments du DOM
+            const carousel = document.getElementById('carousel');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            const carouselContainer = document.querySelector('.carousel-container');
+            
+            let currentSlide = 0;
+            let autoSlideInterval;
+            let userInteracting = false;
+            
+            // Fonction pour changer de slide
+            function goToSlide(index) {
+                // Gestion des limites
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+                
+                const slide = slides[index];
+                
+                // Mise à jour du contenu
+                if (slide.type === "image") {
+                    carousel.innerHTML = `<img src="${slide.src}" alt="${slide.alt}">`;
+                } else if (slide.type === "video") {
+                    carousel.innerHTML = `
+                        <video controls autoplay muted>
+                            <source src="${slide.src}" type="video/mp4">
+                            Votre navigateur ne supporte pas les vidéos HTML5.
+                        </video>
+                    `;
+                }
+                
+                // Mise à jour des indicateurs
+                indicators.forEach((indicator, i) => {
+                    if (i === index) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+                
+                currentSlide = index;
+            }
+            
+            // Démarrer le défilement automatique
+            function startAutoSlide() {
+                // Arrêter tout intervalle existant pour éviter les doublons
+                stopAutoSlide();
+                
+                // Créer un nouvel intervalle qui change de slide toutes les 5 secondes
+                autoSlideInterval = setInterval(() => {
+                    if (!userInteracting) {
+                        goToSlide(currentSlide + 1);
+                    }
+                }, 5000); // 5000 ms = 5 secondes
+            }
+            
+            // Arrêter le défilement automatique
+            function stopAutoSlide() {
+                if (autoSlideInterval) {
+                    clearInterval(autoSlideInterval);
+                }
+            }
+            
+            // Événements pour détecter l'interaction de l'utilisateur
+            carouselContainer.addEventListener('mouseenter', () => {
+                userInteracting = true;
+            });
+            
+            carouselContainer.addEventListener('mouseleave', () => {
+                userInteracting = false;
+            });
+            
+            carouselContainer.addEventListener('touchstart', () => {
+                userInteracting = true;
+            });
+            
+            carouselContainer.addEventListener('touchend', () => {
+                // Petit délai avant de réactiver le défilement automatique après une interaction tactile
+                setTimeout(() => {
+                    userInteracting = false;
+                }, 5000); // 5 secondes de délai
+            });
+            
+            // Événements pour les boutons de navigation
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentSlide - 1);
+                userInteracting = true;
+                // Réinitialiser le délai après le clic
+                setTimeout(() => {
+                    userInteracting = false;
+                }, 10000); // 10 secondes de délai après un clic
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentSlide + 1);
+                userInteracting = true;
+                // Réinitialiser le délai après le clic
+                setTimeout(() => {
+                    userInteracting = false;
+                }, 10000); // 10 secondes de délai après un clic
+            });
+            
+            // Événements pour les indicateurs
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    goToSlide(index);
+                    userInteracting = true;
+                    // Réinitialiser le délai après le clic
+                    setTimeout(() => {
+                        userInteracting = false;
+                    }, 10000); // 10 secondes de délai après un clic
+                });
+            });
+            
+            // Navigation avec les flèches du clavier
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    goToSlide(currentSlide - 1);
+                    userInteracting = true;
+                    // Réinitialiser le délai après pression touche
+                    setTimeout(() => {
+                        userInteracting = false;
+                    }, 10000);
+                }
+                if (e.key === 'ArrowRight') {
+                    goToSlide(currentSlide + 1);
+                    userInteracting = true;
+                    // Réinitialiser le délai après pression touche
+                    setTimeout(() => {
+                        userInteracting = false;
+                    }, 10000);
+                }
+            });
+            
+            // Initialisation
+            goToSlide(0);
+            
+            // Démarrer le défilement automatique
+            startAutoSlide();
+        });
+    </script>
+
+    <!-- Scripts supplémentaires pour les animations -->
+    <script src="../assets/js/animations.js"></script>
+</body>
+</html>

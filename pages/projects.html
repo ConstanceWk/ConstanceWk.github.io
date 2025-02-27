@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets | Constance W.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/components.css" rel="stylesheet">
+    <link href="../assets/css/animations.css" rel="stylesheet">
+    <style>
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 2rem;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-date {
+            font-size: 0.9rem;
+            color: #666666;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-weight: 500;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tech-tag {
+            background: rgba(123, 97, 255, 0.2);
+            color: #7b61ff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-tag:hover {
+            background: rgba(123, 97, 255, 0.8);
+            color: white;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #7b61ff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #7b61ff;
+        }
+        
+        .project-link:hover {
+            background: #7b61ff;
+            color: white;
+        }
+        
+        .project-type {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(123, 97, 255, 0.2);
+            color: #7b61ff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            backdrop-filter: blur(5px);
+        }
+        
+        .demo-badge {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bulles d'arrière-plan -->
+    <div class="bubble-background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">CW</div>
+        <div class="nav-links">
+            <a href="../index.html">Accueil</a>
+            <a href="projects.html" class="active">Projets</a>
+            <a href="about.html">À propos</a>
+            <a href="perso.html">Activités</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="projects-container">
+        <h1 class="projects-title">Projets</h1>
+        <p class="projects-subtitle">Découvrez mes réalisations en Data Science et Intelligence Artificielle</p>
+
+        <div class="projects-grid">
+            <!-- Projet 7 - Zalond'AI -->
+            <article class="project-card">
+                <div class="project-type">Projet en cours</div>
+                <div class="project-content">
+                    <span class="project-date">Janvier 2025 - Présent</span>
+                    <h2>Zaland'AI <span class="demo-badge">Démo</span></h2>
+                    <p>Système de reconnaissance d'images pour identifier les vêtements de Zalando. Utilisation de réseaux de neurones convolutifs (CNN) pour la classification des images de mode.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">CNN</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ConstanceWk/Fashion_MNIST_project" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=FhEXGW1KGQM" class="project-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 6 - NBA Predictor -->
+            <article class="project-card">
+                <div class="project-type">Projet personnel</div>
+                <div class="project-content">
+                    <span class="project-date">Novembre 2024 - Décembre 2024</span>
+                    <h2>NBA Predictor <span class="demo-badge">Démo</span></h2>
+                    <p>Modèle prédictif pour anticiper le nombre de points marqués par un joueur de basket-ball. Utilisation de réseaux de neurones profonds (DNN) pour l'analyse des performances.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">DNN</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Sports Analytics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ConstanceWk/NBA_project" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=FhEXGW1KGQM" class="project-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                            Démo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 5 - Data Visualisation Criminalité -->
+            <article class="project-card">
+                <div class="project-type">Projet scolaire</div>
+                <div class="project-content">
+                    <span class="project-date">Septembre 2024 - Octobre 2024</span>
+                    <h2>Data Visualisation - Criminalité</h2>
+                    <p>Tableau de bord interactif développé avec Streamlit pour visualiser et analyser les données de criminalité en France.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Data Visualisation</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ConstanceWk/Data_Visualization_project_criminality" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 4 - P'AItent -->
+            <article class="project-card">
+                <div class="project-type">Projet scolaire</div>
+                <div class="project-content">
+                    <span class="project-date">Juin 2024 - Juillet 2024</span>
+                    <h2>P'AItent <span class="demo-badge">Démo</span></h2>
+                    <p>Intelligence Artificielle spécialisée dans la prédiction de brevets avec justification des résultats. Analyse avancée de documents techniques.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">IA</span>
+                        <span class="tech-tag">Document Analysis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ConstanceWk/P-AItent" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        
+                        <a href="../assets/projets/PRESENTATION TECHNIQUE.pdf" class="project-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i>
+                            PDF
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 3 - Analyse foncière DVF -->
+            <article class="project-card">
+                <div class="project-type">Projet scolaire</div>
+                <div class="project-content">
+                    <span class="project-date">Juin 2024</span>
+                    <h2>Analyse foncière DVF</h2>
+                    <p>Préparation et analyse de données foncières pour prédire le prix des maisons à l'aide de techniques de Machine Learning.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Supervised Learning</span>
+                        <span class="tech-tag">Unsupervised Learning</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Data Visualization</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 2 - Therap'AI -->
+            <article class="project-card">
+                <div class="project-type">Projet scolaire</div>
+                <div class="project-content">
+                    <span class="project-date">Janvier 2024 - Mai 2024</span>
+                    <h2>Therap'AI - ChatBot Psychologue</h2>
+                    <p>Chatbot d'IA conçu pour assister les psychologues lors des pré-entretiens. Analyse des humeurs et génération automatique de comptes-rendus en PDF.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Sentiment Analysis</span>
+                        <span class="tech-tag">PDF Generation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/B06B05/Projet-Tansverse-L3" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 1 - Jeu éducatif -->
+            <article class="project-card">
+                <div class="project-type">Projet scolaire</div>
+                <div class="project-content">
+                    <span class="project-date">Janvier 2023 - Mai 2023</span>
+                    <h2>Jeu Éducatif pour Enfants</h2>
+                    <p>Application ludique conçue pour l'apprentissage des matières de niveau CM2, combinant éducation et divertissement pour engager les jeunes apprenants.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Modélisation 3D</span>
+                        <span class="tech-tag">Game Design</span>
+                        <span class="tech-tag">Gestion de Projet</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script>
+        // Animation d'entrée pour les cartes de projet
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>

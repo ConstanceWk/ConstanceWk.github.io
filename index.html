@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Constance W. | Data Scientist</title>
+ <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+ <link href="assets/css/main.css" rel="stylesheet">
+ <link href="assets/css/components.css" rel="stylesheet">
+ <link href="assets/css/animations.css" rel="stylesheet">
+ <style>
+    /* Style pour la fenêtre modale */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        max-width: 400px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .modal-text {
+        margin-bottom: 25px;
+        color: #666;
+    }
+
+    .modal-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .modal-button {
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .modal-confirm {
+        background: linear-gradient(135deg, #7b61ff, #a05eff);
+        color: white;
+    }
+
+    .modal-confirm:hover {
+        background: linear-gradient(135deg, #6a50e0, #8f4fe0);
+        transform: translateY(-2px);
+    }
+
+    .modal-cancel {
+        background: #f0f0f0;
+        color: #666;
+    }
+
+    .modal-cancel:hover {
+        background: #e4e4e4;
+    }
+
+    .modal-icon {
+        font-size: 3rem;
+        color: #7b61ff;
+        margin-bottom: 15px;
+    }
+ </style>
+</head>
+<body>
+<!-- Bulles d'arrière-plan -->
+ <div class="bubble-background">
+ <div class="bubble"></div>
+ <div class="bubble"></div>
+ <div class="bubble"></div>
+ <div class="bubble"></div>
+ <div class="bubble"></div>
+ </div>
+<!-- Icônes flottantes -->
+ <div class="floating-icons">
+ <i class="fas fa-python tech-icon"></i>
+ <i class="fas fa-database tech-icon"></i>
+ <i class="fas fa-brain tech-icon"></i>
+ <i class="fas fa-chart-line tech-icon"></i>
+ <i class="fas fa-laptop-code tech-icon"></i>
+ <i class="fas fa-server tech-icon"></i>
+ <i class="fas fa-network-wired tech-icon"></i>
+ <i class="fas fa-code-branch tech-icon"></i>
+ </div>
+<!-- Navigation -->
+ <nav class="navbar">
+ <div class="nav-brand">CW</div>
+ <div class="nav-links">
+ <a href="index.html" class="active">Accueil</a>
+ <a href="pages/projects.html">Projets</a>
+ <a href="pages/about.html">À propos</a>
+ <a href="pages/perso.html">Activités</a>
+ <a href="pages/contact.html">Contact</a>
+ 
+ </div>
+ </nav>
+<!-- Hero Section -->
+ <main class="hero">
+ <div class="container">
+ <div class="hero-grid">
+<!-- Photo de profil -->
+ <div class="profile-side">
+ <div class="profile-container">
+ <div class="profile-wrapper">
+ <img src="assets/img/photo_profil.JPG" alt="Constance W." class="profile-image">
+ </div>
+ </div>
+ </div>
+<!-- Contenu -->
+ <div class="content-side">
+ <h1 class="name-title">Constance Walusiak</h1>
+ <h2 class="role-title">Data Scientist</h2>
+ <h3 class="status-title">Étudiante en Data & IA</h3>
+ <p class="gradient-subtitle">
+ Transforming Data into Insights
+ </p>
+ <p class="description">
+ Spécialisée en analyse de données et machine learning
+ </p>
+ <div class="skills-tags">
+ <span class="skill-tag">Python</span>
+ <span class="skill-tag">ML</span>
+ <span class="skill-tag">SQL</span>
+ <span class="skill-tag">Data</span>
+ <span class="skill-tag">Statistiques</span>
+ </div>
+ <div class="cta-buttons">
+ <a href="#" class="cta-button" id="cv-button">
+ <i class="fas fa-download"></i>
+ Télécharger CV
+ </a>
+ <a href="pages/projects.html" class="cta-button">
+ <i class="fas fa-arrow-right"></i>
+ Voir mes projets
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </main>
+
+<!-- Modal de confirmation de téléchargement -->
+<div id="cv-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-icon">
+            <i class="fas fa-file-alt"></i>
+        </div>
+        <h3 class="modal-title">Tu t'apprêtes à télécharger mon CV !</h3>
+        <p class="modal-text">Ce document contient toutes mes expériences et compétences professionnelles.</p>
+        <div class="modal-buttons">
+            <button class="modal-button modal-confirm" id="confirm-download">Télécharger</button>
+            <button class="modal-button modal-cancel" id="cancel-download">Annuler</button>
+        </div>
+    </div>
+</div>
+
+ <script src="assets/js/main.js"></script>
+ <script src="assets/js/animations.js"></script>
+ <script>
+    // Script pour la fenêtre modale de téléchargement du CV
+    document.addEventListener('DOMContentLoaded', function() {
+        const cvButton = document.getElementById('cv-button');
+        const cvModal = document.getElementById('cv-modal');
+        const confirmDownload = document.getElementById('confirm-download');
+        const cancelDownload = document.getElementById('cancel-download');
+        
+        // Afficher la modale quand on clique sur le bouton
+        cvButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            cvModal.style.display = 'flex';
+        });
+        
+        // Fonction pour ouvrir le CV dans un nouvel onglet
+        function openCVInNewTab() {
+            window.open('CV_WALUSIAK_CONSTANCE_FR.pdf', '_blank');
+            cvModal.style.display = 'none';
+        }
+        
+        // Ouvrir le CV dans un nouvel onglet quand on confirme
+        confirmDownload.addEventListener('click', openCVInNewTab);
+        
+        // Fermer la modale quand on annule
+        cancelDownload.addEventListener('click', function() {
+            cvModal.style.display = 'none';
+        });
+        
+        // Fermer la modale si on clique en dehors
+        cvModal.addEventListener('click', function(e) {
+            if (e.target === cvModal) {
+                cvModal.style.display = 'none';
+            }
+        });
+    });
+ </script>
+</body>
+</html>

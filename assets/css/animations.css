@@ -1,0 +1,164 @@
+/* Animations des éléments au scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation du texte glitch */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        transform: translate(2px, 2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Animation de la sphère flottante */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Animation du curseur de la souris */
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+/* Classes d'animation */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 0.5s ease forwards;
+}
+
+/* Animation pour les cartes projet */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation pour les compétences */
+.skill-bar {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Animation pour le menu */
+.nav-links a::after {
+    transition: width 0.3s ease;
+}
+
+/* Animation du bouton CTA */
+.cta-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Classes d'animation */
+.animate-hidden {
+    opacity: 0;
+}
+
+.animate-visible {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.timeline-visible {
+    animation: slideIn 0.6s ease forwards;
+}
+
+/* Animation des skills */
+.animate-skill-bar {
+    animation: fillBar 1s ease forwards;
+}
+
+@keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--level); }
+}
+
+/* Animation du texte au hover */
+.hover-highlight {
+    transition: color 0.3s ease;
+}
+
+.hover-highlight:hover {
+    color: var(--primary);
+}
+
+/* Animation des particules */
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+    }
+}
+
+.particle {
+    animation: particleFloat linear infinite;
+}

@@ -410,6 +410,9 @@ body {
 @media (prefers-color-scheme: dark) and (max-width: 768px) {
     .nav-links {
         background-color: var(--dark-bg);
-        background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+        background: linear-gradient(135deg, 
+            rgba(108, 99, 255, 0.1), 
+            rgba(108, 99, 255, 0.2)
+        );
     }
 }

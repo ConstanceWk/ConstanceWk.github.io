@@ -1,0 +1,280 @@
+/* Variables de couleur pour le mode clair */
+:root {
+    --light-bg: #F4F5F7;
+    --light-card: #FFFFFF;
+    --light-card-hover: #F0F1F3;
+    --light-border: #E1E4E8;
+    --light-text: #24292E;
+    --light-text-secondary: #6A737D;
+    --accent-color: #6C63FF;
+    --accent-color-light: #818CF8;
+    --badge-color: #FF6584;
+}
+
+/* Variables de couleur pour le mode sombre */
+:root {
+    --dark-bg: #111827;
+    --dark-card: #1F2937;
+    --dark-card-hover: #2D3748;
+    --dark-border: #374151;
+    --dark-text: #E2E8F0;
+    --dark-text-secondary: #94A3B8;
+    --accent-color: #6C63FF;
+    --accent-color-light: #818CF8;
+    --badge-color: #FF6584;
+}
+
+/* Mode clair par défaut */
+body {
+    background-color: var(--light-bg) !important;
+    color: var(--light-text) !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Bulles d'arrière-plan */
+.bubble-background {
+    background-color: var(--light-bg) !important;
+}
+
+.bubble {
+    background: linear-gradient(45deg, 
+        rgba(108, 99, 255, 0.07),
+        rgba(147, 51, 234, 0.07),
+        rgba(236, 72, 153, 0.07)
+    ) !important;
+    opacity: 0.5 !important;
+}
+
+/* Titres de section */
+.projects-title, 
+.projects-subtitle {
+    color: var(--light-text) !important;
+}
+
+.projects-subtitle {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Cartes projet */
+.project-card {
+    background-color: var(--light-card) !important;
+    border: 1px solid var(--light-border) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+    color: var(--light-text) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important;
+}
+
+.project-card:hover {
+    background-color: var(--light-card-hover) !important;
+    transform: translateY(-10px) !important;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Contenu des cartes */
+.project-content h2 {
+    color: var(--light-text) !important;
+}
+
+.project-content p {
+    color: var(--light-text-secondary) !important;
+}
+
+.project-date {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Tags et badges techniques */
+.tech-tag {
+    background: rgba(108, 99, 255, 0.15) !important;
+    color: #7b61ff !important;
+}
+
+.tech-tag:hover {
+    background: rgba(108, 99, 255, 0.3) !important;
+}
+
+/* Type de projet */
+.project-type {
+    background: rgba(108, 99, 255, 0.15) !important;
+    color: #7b61ff !important;
+    backdrop-filter: blur(5px) !important;
+}
+
+/* Badge de démo */
+.demo-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e) !important;
+    color: white !important;
+}
+
+/* Liens de projet */
+.project-link {
+    color: #7b61ff !important;
+    border: 1px solid #7b61ff !important;
+}
+
+.project-link:hover {
+    background: #7b61ff !important;
+    color: white !important;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.nav-links a {
+    color: var(--light-text) !important;
+}
+
+.nav-brand {
+    color: #7b61ff !important;
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--dark-bg) !important;
+        color: var(--dark-text) !important;
+    }
+
+    .bubble-background {
+        background-color: var(--dark-bg) !important;
+    }
+
+    .projects-title, 
+    .projects-subtitle {
+        color: var(--dark-text) !important;
+    }
+
+    .projects-subtitle {
+        color: var(--dark-text-secondary) !important;
+    }
+
+    .project-card {
+        background-color: var(--dark-card) !important;
+        border: 1px solid var(--dark-border) !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+        color: var(--dark-text) !important;
+    }
+
+    .project-card:hover {
+        background-color: var(--dark-card-hover) !important;
+        transform: translateY(-10px) !important;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .project-content h2 {
+        color: var(--dark-text) !important;
+    }
+
+    .project-content p {
+        color: var(--dark-text-secondary) !important;
+    }
+
+    .project-date {
+        color: var(--dark-text-secondary) !important;
+    }
+
+    .tech-tag {
+        background: rgba(108, 99, 255, 0.15) !important;
+        color: var(--accent-color-light) !important;
+    }
+
+    .tech-tag:hover {
+        background: rgba(108, 99, 255, 0.3) !important;
+    }
+
+    .project-type {
+        background: rgba(108, 99, 255, 0.15) !important;
+        color: var(--accent-color-light) !important;
+        backdrop-filter: blur(5px) !important;
+    }
+
+    .navbar {
+        background: rgba(17, 24, 39, 0.8) !important;
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .nav-links a {
+        color: var(--dark-text) !important;
+    }
+
+    .nav-brand {
+        color: var(--accent-color-light) !important;
+    }
+}
+
+/* Classes supplémentaires pour les modales */
+.demo-modal-content {
+    background: var(--light-card) !important;
+    border: 1px solid var(--light-border) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.demo-modal-title {
+    color: var(--light-text) !important;
+}
+
+.demo-modal-text {
+    color: var(--light-text-secondary) !important;
+}
+
+.demo-modal-button {
+    background: linear-gradient(135deg, var(--accent-color), #8f4fe0) !important;
+    color: white !important;
+}
+
+.demo-modal-button:hover {
+    background: linear-gradient(135deg, #5a40d0, #7f3fd0) !important;
+}
+
+.demo-modal-icon {
+    color: var(--accent-color-light) !important;
+}
+
+/* Sélection de texte */
+::selection {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
+/* Pour s'assurer que tous les textes dans les cartes sont visibles */
+.project-card * {
+    color: inherit !important;
+}
+
+.project-card h2 {
+    color: var(--light-text) !important;
+}
+
+.project-card p {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Mode sombre pour les modales */
+@media (prefers-color-scheme: dark) {
+    .demo-modal-content {
+        background: var(--dark-card) !important;
+        border: 1px solid var(--dark-border) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .demo-modal-title {
+        color: var(--dark-text) !important;
+    }
+
+    .demo-modal-text {
+        color: var(--dark-text-secondary) !important;
+    }
+
+    .project-card h2 {
+        color: var(--dark-text) !important;
+    }
+
+    .project-card p {
+        color: var(--dark-text-secondary) !important;
+    }
+}

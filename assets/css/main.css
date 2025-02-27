@@ -335,3 +335,76 @@ body {
         justify-content: center;
     }
 }
+
+/* Styles pour le menu hamburger */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--light-bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    /* Animation de transformation du hamburger en croix */
+    .hamburger-menu.active .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger-menu.active .line2 {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+    .nav-links {
+        background-color: var(--dark-bg);
+    }
+}

@@ -371,16 +371,22 @@ body {
         right: -100%;
         width: 100%;
         height: 100vh;
-        background-color: var(--light-bg);
+        background-color: var(--bg-light); /* Assurez-vous d'avoir une couleur de fond solide */
+        background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end)); /* Ou un dégradé */
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: 0.3s;
-        z-index: 1000;
+        transition: right 0.3s ease;
+        z-index: 999;
+        opacity: 0; /* Ajoutez ceci */
+        visibility: hidden; /* Et ceci */
     }
 
     .nav-links.active {
         right: 0;
+        opacity: 1; /* Ajoutez ceci */
+        visibility: visible; /* Et ceci */
     }
 
     .nav-links a {
@@ -406,5 +412,6 @@ body {
 @media (prefers-color-scheme: dark) and (max-width: 768px) {
     .nav-links {
         background-color: var(--dark-bg);
+        background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
     }
 }
